@@ -1,0 +1,31 @@
+object DataModule1: TDataModule1
+  OldCreateOrder = False
+  Left = 192
+  Top = 124
+  Height = 405
+  Width = 526
+  object SQLConnection1: TSQLConnection
+    ConnectionName = 'IBConnection'
+    DriverName = 'Interbase'
+    GetDriverFunc = 'getSQLDriverINTERBASE'
+    LibraryName = 'dbexpint.dll'
+    Params.Strings = (
+      'DriverName=/3050:C:\Delphi7\db\AvaliacaoDB1.fdb'
+      'Database=AvaliacaoDB1.fdb'
+      'RoleName=RoleName'
+      'User_Name=SYSDBA'
+      'Password=masterkey'
+      'ServerCharSet='
+      'SQLDialect=3'
+      'ErrorResourceFile='
+      'LocaleCode=0000'
+      'BlobSize=-1'
+      'CommitRetain=False'
+      'WaitOnLocks=True'
+      'Interbase TransIsolation=ReadCommited'
+      'Trim Char=False')
+    VendorLib = 'gds32.dll'
+    Left = 184
+    Top = 192
+  end
+end

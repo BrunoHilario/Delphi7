@@ -11,6 +11,5 @@ uses
 begin
   Application.Initialize;
   Application.CreateForm(TFPrincipal, FPrincipal);
-  Application.CreateForm(TFConversaoTexto, FConversaoTexto);
   Application.Run;
 end.
