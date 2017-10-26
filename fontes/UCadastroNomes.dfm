@@ -1,0 +1,116 @@
+object FCadastroNomes: TFCadastroNomes
+  Left = 242
+  Top = 116
+  Width = 755
+  Height = 321
+  Caption = 'Exerc'#237'cio 01 - Trabalhando com array'
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'MS Sans Serif'
+  Font.Style = []
+  OldCreateOrder = False
+  PixelsPerInch = 96
+  TextHeight = 13
+  object gbInserirNomes: TGroupBox
+    Left = 8
+    Top = 16
+    Width = 409
+    Height = 73
+    Caption = 'Inserir nomes:'
+    TabOrder = 0
+    object lNome: TLabel
+      Left = 16
+      Top = 32
+      Width = 31
+      Height = 13
+      Caption = 'Nome:'
+    end
+    object eNome: TEdit
+      Left = 58
+      Top = 28
+      Width = 207
+      Height = 21
+      TabOrder = 0
+    end
+    object bInserirNome: TButton
+      Left = 288
+      Top = 24
+      Width = 75
+      Height = 25
+      Caption = 'Inserir'
+      TabOrder = 1
+      OnClick = bInserirNomeClick
+    end
+  end
+  object gbOperacoes: TGroupBox
+    Left = 8
+    Top = 96
+    Width = 409
+    Height = 169
+    Caption = 'Opera'#231#245'es:'
+    TabOrder = 1
+    object bRemoverPrimeiro: TButton
+      Left = 112
+      Top = 24
+      Width = 139
+      Height = 25
+      Caption = 'Remover primeiro inserido'
+      TabOrder = 0
+      OnClick = bRemoverPrimeiroClick
+    end
+    object bReomoverUltimo: TButton
+      Left = 112
+      Top = 64
+      Width = 139
+      Height = 25
+      Caption = 'Remover '#250'ltimo inserido'
+      TabOrder = 1
+      OnClick = bReomoverUltimoClick
+    end
+    object bContarNomes: TButton
+      Left = 112
+      Top = 96
+      Width = 139
+      Height = 25
+      Caption = 'Contar nomes'
+      TabOrder = 2
+      OnClick = bContarNomesClick
+    end
+    object bSair: TButton
+      Left = 112
+      Top = 136
+      Width = 139
+      Height = 25
+      Caption = '&Sair'
+      TabOrder = 3
+      OnClick = bSairClick
+    end
+  end
+  object gbListaNomes: TGroupBox
+    Left = 424
+    Top = 15
+    Width = 297
+    Height = 250
+    Caption = 'Lista de nomes:'
+    TabOrder = 2
+    object bExibirNomes: TButton
+      Left = 24
+      Top = 24
+      Width = 249
+      Height = 25
+      Caption = 'Exibir Nomes'
+      TabOrder = 0
+      OnClick = bExibirNomesClick
+    end
+    object lnomes: TListBox
+      Left = 24
+      Top = 56
+      Width = 249
+      Height = 177
+      ItemHeight = 13
+      TabOrder = 1
+    end
+  end
+end

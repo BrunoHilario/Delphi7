@@ -1,0 +1,93 @@
+unit UCadastroNomes;
+
+interface
+
+uses
+  Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
+  Dialogs, StdCtrls;
+
+type
+  TFCadastroNomes = class(TForm)
+    gbInserirNomes: TGroupBox;
+    lNome: TLabel;
+    eNome: TEdit;
+    bInserirNome: TButton;
+    gbOperacoes: TGroupBox;
+    bRemoverPrimeiro: TButton;
+    bReomoverUltimo: TButton;
+    bContarNomes: TButton;
+    bSair: TButton;
+    gbListaNomes: TGroupBox;
+    bExibirNomes: TButton;
+    lnomes: TListBox;
+    procedure bInserirNomeClick(Sender: TObject);
+    procedure bExibirNomesClick(Sender: TObject);
+    procedure bRemoverPrimeiroClick(Sender: TObject);
+    procedure bReomoverUltimoClick(Sender: TObject);
+    procedure bContarNomesClick(Sender: TObject);
+  private
+    { Private declarations }
+  public
+    { Public declarations }
+  end;
+
+var
+  FCadastroNomes: TFCadastroNomes;
+
+implementation
+
+{$R *.dfm}
+
+var  vetorNome: array of String;
+     n : integer = 0;
+
+procedure TFCadastroNomes.bInserirNomeClick(Sender: TObject);
+begin
+
+  if eNome.text <> '' then
+  begin
+      n:= n+1;
+      SetLength(vetorNome, n);
+      vetorNome[n-1] := eNome.text;
+      lNomes.Items.Clear;
+      lNomes.Items.Add('Cadastrado com sucesso');
+  end;
+  eNome.text := '';
+end;
+
+procedure TFCadastroNomes.bExibirNomesClick(Sender: TObject);
+var i :integer;
+begin
+    lNomes.Items.Clear;
+    for i:=0 to n-1 do
+    begin
+        lNomes.Items.Add(vetorNome[i]);
+
+    end;
+    lNomes.
+end;
+
+procedure TFCadastroNomes.bRemoverPrimeiroClick(Sender: TObject);
+var i:integer;
+begin
+   vetorNome[0] := '';
+   for i:=1 to n-1 do
+   begin
+      vetorNome[i-1]:=vetorNome[i];
+      vetorNome[i]:='';
+   end;
+
+end;
+
+procedure TFCadastroNomes.bReomoverUltimoClick(Sender: TObject);
+begin
+   vetorNome[n-1] := '';
+   n:=n-1;
+end;
+
+procedure TFCadastroNomes.bContarNomesClick(Sender: TObject);
+begin
+    ShowMessage('Quantidade de nomes: '+inttostr(n));
+end;
+
+end.
